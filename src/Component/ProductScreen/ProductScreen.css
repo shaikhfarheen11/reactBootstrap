@@ -1,33 +1,74 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.0rem;
+  justify-content: space-between;
+  margin-left: 14rem;
+}
 
-.card {
-  border-radius: 10px;
+
+.card-img-top.smaller-image {
+  max-width: 300px;
+  
+
+}
+.card-subtitle.mb-2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 12rem;
   
 }
-  
-  .products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 100px;
-  }
+.products .product-card {
+  border: none;
+  padding: 0;
+ 
+}
+
+
+/* ... rest of your CSS ... */
+
+.product-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
 .cart-badge {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.cart-badge-text {
+  margin-left: 5px;
+}
+
+.cart-preview {
+  position: absolute;
+  top: 30px;
+  left: -340px; /* Adjust this value as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-preview-item {
+  margin-bottom: 5px;
+}
+.card-text{
+  margin-right: 11rem;
+  font-size: 1.3rem;
+
   
-  .cart-badge-number {
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    font-size: 12px;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
-  }
+}
+.card-button {
+  margin-right: 11rem;
+  width: 7rem;
+  padding: 2rem;
   
+}
+.mr-auto {
+  margin-left: 5rem;
+}
