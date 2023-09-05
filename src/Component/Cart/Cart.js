@@ -1,22 +1,25 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import './Cart.css';
+import { useCart } from './CartContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Cart = ({ isOpen, toggleCart, cartItems, removeFromCart, setCartItems }) => {
-  
+const Cart = ({ isOpen, toggleCart }) => {
+  const { cartElements, removeFromCart, setCartElements } = useCart();
+
   const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartElements.reduce((total, item) => total + item.price * item.quantity, 0);
   };
-  
+
   const handleQuantityChange = (index, newQuantity) => {
-    const updatedCart = [...cartItems];
+    const updatedCart = [...cartElements];
     updatedCart[index].quantity = newQuantity;
-    setCartItems(updatedCart);
+    setCartElements(updatedCart);
   };
 
   return (
     <section id="cart" className={`container ${isOpen ? 'open' : ''}`}>
-      <h2>CART</h2>
+      <h2 className='carrt'>CART</h2>
       <button className="cancel" onClick={toggleCart}>X</button>
       <div className="cart-row cart-header">
         <span className='cart-item cart-column'>ITEM</span>
@@ -29,7 +32,7 @@ const Cart = ({ isOpen, toggleCart, cartItems, removeFromCart, setCartItems }) =
       </div>
 
       <div className='cart-items'>
-        {cartItems.map((item, index) => (
+        {cartElements.map((item, index) => (
           <div className="cart-row" key={index}>
             <div className='cart-item cart-column'>
               <img className='cart-img' src={item.imageUrl} alt={item.title} />
@@ -47,7 +50,8 @@ const Cart = ({ isOpen, toggleCart, cartItems, removeFromCart, setCartItems }) =
               </div>
             </div>
             <div className='cart-remove cart-column'>
-              <Button variant="danger" className="custom-remove-button" onClick={() => removeFromCart(index)}>
+              <Button variant="danger" 
+              className="custom-remove-button" onClick={() => removeFromCart(index)}>
                 REMOVE
               </Button>
             </div>

@@ -1,17 +1,14 @@
-// CartContext.js
 import React, { createContext, useContext, useState } from 'react';
 
 const CartContext = createContext();
 
-export const useCart = () => useContext(CartContext);
+export const useCartReact = () => useContext(CartContext);
 
-export const CartProvider = ({ children }) => {
+export function CartProvider({ children }){
   const [cartElements, setCartElements] = useState([]);
 
   const addToCart = (product) => {
-    const existingCartItemIndex = cartElements.findIndex(
-      (item) => item.title === product.title
-    );
+    const existingCartItemIndex = cartElements.findIndex(item => item.title === product.title);
 
     if (existingCartItemIndex !== -1) {
       const updatedCart = [...cartElements];
@@ -28,10 +25,11 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider
-      value={{ cartElements, addToCart, removeFromCart }}
-    >
+    <CartContext.Provider value={{ cartElements, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
 };
+export function useCart() {
+  return useContext(CartContext);
+}
