@@ -152,7 +152,7 @@ background-color: grey;
   left: calc(-50vw + 50%);
   height: 14rem;
   font-family: 'Times New Roman', Times, serif;
-  margin-top: 0.1rem; 
+  margin-top: -0.4rem; 
 }
 .home-title{
   font-size: 8rem;

@@ -1,18 +1,21 @@
 import React from 'react';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import './AboutUs.css';
 import About from './About.png';
 
 const AboutUs = () => {
   return (
-    <div className="about-container">
-      <div className="about-heading">
-        <h2 className="about">About</h2>
-      </div>
-      <div className="about-content">
-        <div className="about-image-container">
-          <img src={About} alt="About" className="about-image" />
-        </div>
-        <div className="about-text">
+    <Container className="about-container">
+      <Row>
+        <Col>
+          <h2 className="about">About</h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={12} md={6} className="about-image-container">
+          <Image src={About} alt="About" className="about-image" roundedCircle />
+        </Col>
+        <Col sm={12} md={6} className="about-text">
           <p className="about-caption">
             Lorem ipsum carrots enhanced rebates. Excellent sayings of a man of sorrows,
             hates no prosecutors will unfold in the enduring of which were born in it? 
@@ -25,14 +28,12 @@ const AboutUs = () => {
             the one that those works, we are less than they, this refused to the pleasures of 
             deleniti? Those are! Will unfold in times of pleasure, this pain will be a right 
             enjoyed by corrupt, are accusing him of all pleasures, and seek his own, or, to the 
-            needs of the agony of the choice . We hate the fellow.Lorem ipsum dolor, sit amet
-             consectetur rebates. The distinction, that arise from orto. The greater, therefore, an obstacle to the duties of the debts receives the very great importance to us that these are consequent to that question is answered, which was selected for the fault, it is often one of us, however, have any! Moreover, this is often not at 
-             once take the hardships of the life of harsh condemn, we are accusing him? Him whom something large cisterns.
+            needs of the agony of the choice . We hate the fellow.
+            Lorem ipsum dolor, sit amet consectetur rebates. The distinction, that arise from or to. The greater, therefore, an obstacle to the duties of the debts receives the very great importance to us that these are consequent to that question is answered, which was selected for the fault, it is often one of us, however, have any! Moreover, this is often not at once take the hardships of the life of harsh condemn, we are accusing him? Him whom something large cisterns.
           </p>
-
-        </div>
-      </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
