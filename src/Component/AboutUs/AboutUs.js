@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import './AboutUs.css';
-import About from './About.png';
+import AboutUsImage from './About.png';
 
 const AboutUs = () => {
   return (
@@ -13,7 +13,7 @@ const AboutUs = () => {
       </Row>
       <Row>
         <Col sm={12} md={6} className="about-image-container">
-          <Image src={About} alt="About" className="about-image" roundedCircle />
+          <Image src={AboutUsImage} alt="About" className="about-image" roundedCircle />
         </Col>
         <Col sm={12} md={6} className="about-text">
           <p className="about-caption">

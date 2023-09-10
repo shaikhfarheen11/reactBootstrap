@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductScreen from './Component/ProductScreen/ProductScreen';
-import AboutUs from './Component/AboutUs/AboutUs'; 
+import AboutUs from './Component/AboutUs/AboutUs';
+import Home from './Component/Home/Home';
 import { CartProvider } from './Component/Cart/CartContext';
 import Layout from './Component/Layout/Layout';
 
@@ -14,8 +15,11 @@ function App() {
           <Router>
             <Layout>
               <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/store" element={<ProductScreen />} />
                 <Route path="/about" element={<AboutUs />} />
-                <Route path="/" element={<ProductScreen />} />
+     
+             
               </Routes>
             </Layout>
           </Router>
