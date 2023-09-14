@@ -38,7 +38,7 @@
   font-size: 1.2rem;
   margin-bottom: 2rempx !important;
 } */
-.cart-badge {
+.cartBadge {
   position: absolute;
   top: 5px;
   right: 2rem;
@@ -94,7 +94,7 @@
   
  
 }
-.navbar .mx-auto .nav-link {
+.navbar .mxAuto .nav-link {
   margin-right: 5rem; 
 
 }

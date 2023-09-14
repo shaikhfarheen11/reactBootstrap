@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import './ProductScreen.css';
+import  './ProductScreen.css';
 import Cart from '../Cart/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useCart } from '../Cart/CartContext';
@@ -40,7 +40,6 @@ const ProductScreen = () => {
   const { cartElements, addToCart, setCartElements, removeFromCart } = useCart();
   const [isCartOpen, setCartOpen] = useState(false);
 
-  // const isHomePage = location.pathname === '/home';
   const isStorePage = location.pathname === '/store';
 
   const toggleCartPreview = () => {
